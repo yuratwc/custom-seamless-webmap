@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>MapLibre GL JS ベクトル地図サンプル</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+  <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <script type='module'>
+    import * as maplibregl from 'https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.mjs';
+
+    const styleJson = {
+      "version": 8,
+      "glyphs": "https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf",
+      "sources": {
+        "japan-map": {
+          "type": "vector",
+          "tiles": ["https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"],
+          "minzoom": 4,
+          "maxzoom": 16,
+          "attribution": '出典：<a href="https://maps.gsi.go.jp/development/ichiran.html">国土地理院</a>'
+        }
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "background",
+          "paint": {
+            "background-color": "#FFFAFA"
+          }
+        },
+        {
+          "id": "water",
+          "type": "fill",
+          "source": "japan-map",
+          "source-layer": "waterarea",
+          "paint": {
+            "fill-color": "#4682B4",
+            "fill-opacity": 1
+          }
+        },
+        {
+          "id": "highway1",
+          "type": "line",
+          "source": "japan-map",
+          "source-layer": "road",
+          "minZoom": 4,
+          "maxZoom": 7,
+          "filter": ["==", ["get", "ftCode"], 52703], // 高速道路のフィルタリング条件を追加
+          "paint": {
+            "line-color": "#228B22",
+            "line-opacity": 1,
+            'line-width': 2,
+          }
+        },
+        {
+          "id": "highway2",
+          "type": "line",
+          "source": "japan-map",
+          "source-layer": "road",
+          "minZoom": 8,
+          "maxZoom": 10,
+          "filter": ["==", ["get", "rdCtg"], 3], // 高速道路のフィルタリング条件を追加
+          "paint": {
+            "line-color": "#228B22",
+            "line-opacity": 1,
+            'line-width': [
+              'step', // step式でズームレベルに応じて線幅を変化させる
+              ['zoom'],      // ズームレベルを基準にする
+              2,     // デフォルトの幅（基準ズーム未満）
+              10, 4, // ズーム10以上になったら幅を4にする
+            ]
+          }
+        },
+      ]
+    };
+
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: styleJson,
+      center: [139.7671, 35.6812], // 中心位置を追加 (東京駅)
+      zoom: 9, // 初期ズームレベルを指定
+      minZoom: 4,
+      maxZoom: 10
+    });
+
+
+    map.on('load', () => {
+      // 1. GeoJSONソースの追加
+      map.addSource('sample-geojson', {
+        type: 'geojson',
+        data: './data.geojson' // または直接GeoJSONオブジェクト
+      });
+      // 2. 点レイヤーの追加
+      map.addLayer({
+        id: 'sample-circle-layer',
+        type: 'circle',
+        source: 'sample-geojson',
+        paint: {
+          'circle-radius': 8, // 点の半径（ピクセル）
+          'circle-color': '#ff5722', // 点の色
+          'circle-stroke-width': 2, // 枠線の太さ
+          'circle-stroke-color': '#ffffff' // 枠線の色
+        }
+      });
+      // 3. ラベルレイヤーの追加
+      map.addLayer({
+        id: 'sample-circle-layer-label',
+        type: 'symbol',
+        source: 'sample-geojson',
+        layout: {
+          'text-field': ['get', 'name'],
+          'text-size': 12
+        }
+      });
+    });
+    map.addControl(new maplibregl.NavigationControl(), 'top-right');
+  </script>
+</body>
+
+</html>

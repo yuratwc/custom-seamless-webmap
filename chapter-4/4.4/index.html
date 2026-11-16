@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>MapLibre GL JS ベクトル地図サンプル</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+  <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <script type='module'>
+    import * as maplibregl from 'https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.mjs';
+    import { Protocol } from 'https://esm.sh/pmtiles@latest';
+
+    let protocol = new Protocol();
+    maplibregl.addProtocol("pmtiles", protocol.tile);
+
+    const styleJson = {
+      "version": 8,
+      "glyphs": "https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf",
+      "sources": {
+        "shizuoka-map": {
+          "type": "vector",
+          "url": "pmtiles://./shizuoka.pmtiles",
+          "attribution":
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }
+      },
+      "layers": [
+        {
+          "id": "background",
+          "type": "background",
+          "paint": {
+            "background-color": "#f2efe9" // 背景色
+          }
+        },
+        {
+          "id": "water",
+          "type": "fill",
+          "source": "shizuoka-map",
+          "source-layer": "water",
+          "paint": {
+            "fill-color": "#aad3df",
+          }
+        },
+        {
+          "id": "road",
+          "type": "line",
+          "source": "shizuoka-map",
+          "source-layer": "transportation",
+          "paint": {
+            "line-color": "#222222",
+            "line-opacity": 0.9
+          }
+        },
+      ]
+    };
+
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: styleJson,
+      center: [139.7671, 35.6812], // 中心位置を追加 (東京駅)
+      zoom: 9, // 初期ズームレベルを指定
+    });
+    map.addControl(new maplibregl.NavigationControl(), 'top-right');
+  </script>
+</body>
+
+</html>

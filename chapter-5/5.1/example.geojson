@@ -1,0 +1,50 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.7671, 35.6812]
+      },
+      "properties": {
+        "name": "東京駅",
+        "category": "駅"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [139.7671, 35.6812],
+          [139.7454, 35.6852],
+          [139.6917, 35.6895]
+        ]
+      },
+      "properties": {
+        "name": "ルート",
+        "distance_km": 8.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [139.7, 35.65],
+            [139.8, 35.65],
+            [139.8, 35.7],
+            [139.7, 35.7],
+            [139.7, 35.65]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "ポリゴン",
+        "color": "#ff0000"
+      }
+    }
+  ]
+}

@@ -1,0 +1,498 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-10-25T22:44:50Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node/1396150225",
+      "properties": {
+        "@id": "node/1396150225",
+        "name": "手児の呼坂・ぬすっと坂(Tego no yobisaka)",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3555348,
+          34.9549397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1431670343",
+      "properties": {
+        "@id": "node/1431670343",
+        "ele": "375",
+        "layer": "2",
+        "name": "梵天山・徳願寺山 西峰",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3407135,
+          34.9619502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1431670344",
+      "properties": {
+        "@id": "node/1431670344",
+        "ele": "417",
+        "name": "駿河峰",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3200506,
+          34.9611985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1431670345",
+      "properties": {
+        "@id": "node/1431670345",
+        "ele": "356",
+        "name": "大鈩山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3125371,
+          34.9601326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1431670602",
+      "properties": {
+        "@id": "node/1431670602",
+        "ele": "352",
+        "name": "扇松峰・仏平・徳願寺山 東峰",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3469525,
+          34.9603834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1502931673",
+      "properties": {
+        "@id": "node/1502931673",
+        "ele": "63.7",
+        "name": "八幡山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.4017834,
+          34.9705221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1504204062",
+      "properties": {
+        "@id": "node/1504204062",
+        "name": "観昌院山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3248291,
+          34.9619524
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1506243902",
+      "properties": {
+        "@id": "node/1506243902",
+        "ele": "165",
+        "name": "円山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.352175,
+          34.9622032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1508684567",
+      "properties": {
+        "@id": "node/1508684567",
+        "ele": "108.1",
+        "name": "谷津山",
+        "natural": "peak",
+        "wikidata": "Q11633018",
+        "wikipedia": "ja:谷津山"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.4029773,
+          34.9840541
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1515496893",
+      "properties": {
+        "@id": "node/1515496893",
+        "ele": "35",
+        "name": "有東山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.4040038,
+          34.9668688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1516210654",
+      "properties": {
+        "@id": "node/1516210654",
+        "ele": "102.7",
+        "name": "佐渡山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3559665,
+          34.9499251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1516217844",
+      "properties": {
+        "@id": "node/1516217844",
+        "name": "金山",
+        "name:en": "Kanayama",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3627011,
+          34.9574398
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1519176665",
+      "properties": {
+        "@id": "node/1519176665",
+        "ele": "470",
+        "name": "満観峰",
+        "natural": "peak",
+        "wikidata": "Q17987608",
+        "wikipedia": "ja:満観峰"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3261472,
+          34.9227395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1521108902",
+      "properties": {
+        "@id": "node/1521108902",
+        "ele": "43.7",
+        "name": "舟山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3575565,
+          34.9692591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1533689606",
+      "properties": {
+        "@id": "node/1533689606",
+        "ele": "140",
+        "name": "浅間山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3737618,
+          34.9891996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1533689607",
+      "properties": {
+        "@id": "node/1533689607",
+        "contact:tripadvisor": "16731765",
+        "ele": "171",
+        "name": "賤機山",
+        "name:en": "Mt. Shizuhata",
+        "name:fr": "Mont Shizuhata",
+        "name:ja-Hira": "しずはたやま",
+        "name:ja-Latn": "Shizuhata-yama",
+        "natural": "peak",
+        "wikidata": "Q11635100",
+        "wikimedia_commons": "Category:Mount Shizuhata",
+        "wikipedia": "ja:賤機山"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3748811,
+          34.995455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1533693449",
+      "properties": {
+        "@id": "node/1533693449",
+        "ele": "198",
+        "name": "一本松",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3761047,
+          35.0055711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1533740200",
+      "properties": {
+        "@id": "node/1533740200",
+        "ele": "226",
+        "name": "千代山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3484663,
+          34.9899457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1534290336",
+      "properties": {
+        "@id": "node/1534290336",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3325424,
+          34.9610819
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1540355420",
+      "properties": {
+        "@id": "node/1540355420",
+        "ele": "64",
+        "name": "清水山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3968198,
+          34.9802448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1556921666",
+      "properties": {
+        "@id": "node/1556921666",
+        "ele": "43",
+        "name": "木枯らしの森",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3394764,
+          34.9778412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1795199654",
+      "properties": {
+        "@id": "node/1795199654",
+        "ele": "160",
+        "name": "元宿山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3386206,
+          34.9426764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1911060719",
+      "properties": {
+        "@id": "node/1911060719",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.363264,
+          34.9590803
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3289579767",
+      "properties": {
+        "@id": "node/3289579767",
+        "ele": "290",
+        "name": "常住山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3459755,
+          34.9936425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3289579768",
+      "properties": {
+        "@id": "node/3289579768",
+        "name": "杉ノ沢山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3366878,
+          35.0030781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3289579769",
+      "properties": {
+        "@id": "node/3289579769",
+        "comment": "GSImaps/std is used for elevation.",
+        "ele": "435.2",
+        "name": "安倍城址",
+        "natural": "peak",
+        "source": "GSImaps/std"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3387154,
+          35.0062152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5582426646",
+      "properties": {
+        "@id": "node/5582426646",
+        "ele": "300",
+        "name": "朝鮮岩",
+        "natural": "peak",
+        "source": "Shizuoka ortho; survey",
+        "wikidata": "Q86728231",
+        "wikipedia": "ja:朝鮮岩"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3453185,
+          34.9342335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5582426647",
+      "properties": {
+        "@id": "node/5582426647",
+        "ele": "450",
+        "name": "丸子富士",
+        "natural": "peak",
+        "source": "GSImaps/std;survey",
+        "wikidata": "Q66832980",
+        "wikipedia": "ja:丸子富士"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3332023,
+          34.9261545
+        ]
+      }
+    }
+  ]
+}

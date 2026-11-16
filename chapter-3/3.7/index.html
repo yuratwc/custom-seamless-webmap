@@ -1,71 +1,75 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>MapLibre GL JS ベクトル地図サンプル</title>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 
-    <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' />
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
+<head>
+  <meta charset="utf-8">
+  <title>MapLibre GL JS ベクトル地図サンプル</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+  <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <script type='module'>
+    import * as maplibregl from 'https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.mjs';
+
+    const styleJson = {
+      "version": 8,
+      "glyphs": "https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf",
+      "sources": {
+        "japan-map": {
+          "type": "vector",
+          "tiles": ["https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"],
+          "minzoom": 4,
+          "maxzoom": 16
         }
-        #map {
-            width: 100vw;
-            height: 100vh;
-        }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-
-    <script type='module'>
-      import * as maplibregl from 'https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.mjs';
-
-      const styleJson = {
-        "version": 8,
-        "glyphs": "https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf",
-        "sources": {
-          "japan-map": {
-            "type": "vector",
-            "tiles": ["https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"],
-            "minzoom": 4,
-            "maxzoom": 16
+      },
+      "layers": [
+        {
+          "id": "water",
+          "type": "fill",
+          "source": "japan-map",
+          "source-layer": "waterarea",
+          "paint": {
+            "fill-color": "#0000FF",
+            "fill-opacity": 1
           }
         },
-"layers": [
-  {
-    "id": "water",
-    "type": "fill",
-    "source": "japan-map",
-    "source-layer": "waterarea",
-    "paint": {
-      "fill-color": "#0000FF",
-      "fill-opacity": 1
-    }
-  },
-  {
-  "id": "road",
-  "type": "line",
-  "source": "japan-map",
-  "source-layer": "road",
-  "paint": {
-    "line-color": "#00FF00",
-    "line-opacity": 1,
-    "line-width": 2,
-  }
-},
-]
-      };
+        {
+          "id": "road",
+          "type": "line",
+          "source": "japan-map",
+          "source-layer": "road",
+          "paint": {
+            "line-color": "#00FF00",
+            "line-opacity": 1,
+            "line-width": 2,
+          }
+        },
+      ]
+    };
 
-      const map = new maplibregl.Map({
-        container: 'map',
-        style: styleJson,
-        center: [139.7671, 35.6812], // 中心位置を追加 (東京駅)
-		    zoom: 9 // 初期ズームレベルを指定
-      });
-      map.addControl(new maplibregl.NavigationControl(), 'top-right');
-    </script>
-  </body>
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: styleJson,
+      center: [139.7671, 35.6812], // 中心位置を追加 (東京駅)
+      zoom: 9 // 初期ズームレベルを指定
+    });
+    map.addControl(new maplibregl.NavigationControl(), 'top-right');
+  </script>
+</body>
+
 </html>
